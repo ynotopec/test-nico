@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Translate - Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app__header">
+        <div class="brand">
+          <span class="brand__logo">T</span>
+          <span class="brand__name">Translate</span>
+        </div>
+        <nav class="app__nav">
+          <button class="ghost">Documents</button>
+          <button class="ghost">Historique</button>
+          <button class="ghost">Favoris</button>
+          <button class="primary">Se connecter</button>
+        </nav>
+      </header>
+
+      <main class="app__content">
+        <section class="hero">
+          <div>
+            <p class="eyebrow">Traduction instantanée</p>
+            <h1>Traduisez, comparez et révisez en un seul endroit.</h1>
+            <p class="subtitle">
+              Traduisez des phrases complètes, personnalisez le ton et écoutez la
+              prononciation.
+            </p>
+          </div>
+          <div class="hero__actions">
+            <button class="primary">Commencer</button>
+            <button class="ghost">Découvrir les plans</button>
+          </div>
+        </section>
+
+        <section class="translator">
+          <div class="toolbar">
+            <div class="language">
+              <select id="source-language" aria-label="Langue source">
+                <option value="fr">Français</option>
+                <option value="en">Anglais</option>
+                <option value="es">Espagnol</option>
+                <option value="de">Allemand</option>
+              </select>
+              <button id="swap" class="icon" aria-label="Permuter les langues">
+                ⇄
+              </button>
+              <select id="target-language" aria-label="Langue cible">
+                <option value="en">Anglais</option>
+                <option value="fr">Français</option>
+                <option value="es">Espagnol</option>
+                <option value="de">Allemand</option>
+              </select>
+            </div>
+            <div class="tools">
+              <button class="ghost">Détecter la langue</button>
+              <button class="ghost">Copier</button>
+              <button class="primary" id="translate">Traduire</button>
+            </div>
+          </div>
+
+          <div class="panes">
+            <div class="pane">
+              <div class="pane__header">
+                <span>Texte source</span>
+                <span class="meta" id="source-count">0 / 500</span>
+              </div>
+              <textarea
+                id="source"
+                maxlength="500"
+                placeholder="Saisissez votre texte..."
+              ></textarea>
+              <div class="pane__footer">
+                <button class="ghost small">Importer un document</button>
+                <button class="ghost small">Micro</button>
+              </div>
+            </div>
+
+            <div class="pane">
+              <div class="pane__header">
+                <span>Traduction</span>
+                <span class="meta" id="target-count">0 / 500</span>
+              </div>
+              <textarea
+                id="target"
+                readonly
+                placeholder="La traduction apparaîtra ici..."
+              ></textarea>
+              <div class="pane__footer">
+                <button class="ghost small">Écouter</button>
+                <button class="ghost small">Évaluer</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="features">
+          <div class="feature">
+            <h3>Suggestions intelligentes</h3>
+            <p>Recevez des propositions naturelles pour un ton plus fluide.</p>
+          </div>
+          <div class="feature">
+            <h3>Glossaire personnalisé</h3>
+            <p>Gardez vos termes métiers cohérents sur tous les supports.</p>
+          </div>
+          <div class="feature">
+            <h3>Collaboration</h3>
+            <p>Partagez vos traductions avec l'équipe en un clic.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
